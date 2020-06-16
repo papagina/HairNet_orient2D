@@ -1,0 +1,37 @@
+#
+#  Created by Yi 16 June 2020
+#
+
+#This repo contains the code for generating the orientation images in the paper HairNet: Single-View Hair Reconstruction using Convolutional Neural Networks.
+
+
+#####################################STEP ONE##################################################################
+#Compile the code in Hair_Orient2D.
+
+#Please check the CMakeLists for dependencies.
+
+#OPENGL, GLEW, GLFW3 and OpenMesh are only used for rendering a white body silhouette. If you don't need it, you can simply remove them and compile with the optional main_nobodyrender.cpp.
+
+#####################################STEP Two##################################################################
+#Compute 2D orienation maps from portrait images in given folder.
+
+#Put the test imgs in "test_imgs/img/", the test images should be square, e.g. 800*800
+#Manually draw the body image and the hair segments. (T_T Sorry, I can't opensource this part so please either manually draw it or look for some other opensource codes.)
+#Put the body images in "test_imgs/body_img/", with the same name as in img folder, XXX.png. body is white, background is black
+#Put the segment images in "test_imgs/seg/", with the same name as in img folder, XXX.png. hair is white, background is black
+#Use command:
+Hair_Orient2D/Orient2D 1 test_imgs/
+#argv: has_body_img, hair_folder
+
+#if you somehow can retreat the transformation matrix of the head in the image as described in our paper, you can also choose to automatically render the body as follows:
+#Put the transformation matrices(4x4) in "test_imgs/exMat/"
+#Use command:
+Hair_Orient2D/Orient2D 0 test_imgs/
+
+
+#Note: all the directory arguments need to have "/" at the end of the string.
+
+
+
+
+
