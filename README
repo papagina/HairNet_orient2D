@@ -30,6 +30,7 @@ Hair_Orient2D/Orient2D 0 test_imgs/
 
 
 #Note: all the directory arguments need to have "/" at the end of the string.
+#I put some sample input and output in "test_img/".
 
 
 
